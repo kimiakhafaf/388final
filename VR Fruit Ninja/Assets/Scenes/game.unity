@@ -38,7 +38,8 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -516,7 +517,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
-
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1071,9 +1071,9 @@ RectTransform:
   m_Father: {fileID: 247696340}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 325, y: 359}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -214.79999, y: -93}
   m_SizeDelta: {x: 199.5, y: 52}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1529533220
@@ -1393,7 +1393,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7daf2eb068c55d34887217ab718161d2, type: 3}
-
 --- !u!1 &1996837437 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3916609534273537516, guid: 7daf2eb068c55d34887217ab718161d2,
@@ -1423,11 +1422,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1033151820017588247, guid: 4e694a2ba12f32645ab9f3f1e514d768,
-        type: 3}
-      propertyPath: m_Name
-      value: OVRCameraRig
-      objectReference: {fileID: 0}
     - target: {fileID: 1033151820017588234, guid: 4e694a2ba12f32645ab9f3f1e514d768,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1482,6 +1476,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1033151820017588247, guid: 4e694a2ba12f32645ab9f3f1e514d768,
+        type: 3}
+      propertyPath: m_Name
+      value: OVRCameraRig
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e694a2ba12f32645ab9f3f1e514d768, type: 3}
