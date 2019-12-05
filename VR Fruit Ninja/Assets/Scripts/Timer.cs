@@ -19,5 +19,15 @@ public class Timer : MonoBehaviour
     {
         timeLeft -= Time.deltaTime;
         countdown.GetComponent<UnityEngine.UI.Text>().text = "Timer: "+ Mathf.Round(timeLeft).ToString();
+        if (timeLeft <= 0)
+        {
+            SceneManager.LoadScene("gameover");
+        }
     }
+    public void start_game()
+    {
+        SceneManager.LoadScene("game");
+    }
+
 }
+
