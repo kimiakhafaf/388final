@@ -33,12 +33,14 @@ public class fruit_fall : MonoBehaviour
         for(int i = 0;i < Random.Range(2,5);i++){
 
             int spawn = Random.Range(0,fruitList.Count);
-            Instantiate(fruitList[spawn],new Vector3(generateX(),generateY(),generateZ()),Quaternion.identity);
+            GameObject create = Instantiate(fruitList[spawn],new Vector3(generateX(),generateY(),generateZ()),Quaternion.identity);
+            create.name = fruitList[spawn].name;
         }
         
         //20% chance for bomb to spawn
         if(Random.Range(0,5) == 0){
-            Instantiate(bomb,new Vector3(generateX(),generateY(),generateZ()),Quaternion.identity);
+            GameObject create = Instantiate(bomb,new Vector3(generateX(),generateY(),generateZ()),Quaternion.identity);
+            create.name = bomb.name;
         }
     }
 
