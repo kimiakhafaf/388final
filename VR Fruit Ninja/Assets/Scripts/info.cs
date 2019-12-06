@@ -23,7 +23,7 @@ public class switch_scene : MonoBehaviour
         time -= Time.deltaTime;
         int t = (int)time;
         timer.text = "Timer: " + t.ToString();
-        score.text = "Points: " + point.ToString();
+        //score.text = "Points: " + point.ToString();
         if (time <= 0)
         {
             SceneManager.LoadScene("gameover");
