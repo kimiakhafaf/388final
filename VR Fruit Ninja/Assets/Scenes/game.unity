@@ -555,7 +555,7 @@ MonoBehaviour:
   strawberry: {fileID: 2534322148008066745, guid: b7521c7ee69fdac40b6aefe7e83c687f,
     type: 3}
   bomb: {fileID: 6545611312339491805, guid: 4b0561aa13c3e114b856e2f165c22fb5, type: 3}
-  spawnTime: 0.1
+  spawnTime: 1
   fruitList: []
 --- !u!1001 &939083385
 PrefabInstance:

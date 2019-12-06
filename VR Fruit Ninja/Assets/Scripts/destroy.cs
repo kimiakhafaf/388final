@@ -4,22 +4,29 @@ using UnityEngine;
 
 public class destroy : MonoBehaviour
 {
+    
+    private float timer = 0;        
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        Destroy(this.gameObject,7);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.y <= -2)
+        timer += Time.deltaTime;
+        if (transform.position.y <= 0)
         {
-            Destroy(gameObject);
+            Destroy(this.gameObject);
         }
+
     }
 
-    void onTriggerEnter(Collider other){
-        Destroy(gameObject);
+    void onCollisionEnter(Collider other){
+        if(other.gameObject.tag == "floor"){
+            Destroy(this.gameObject);
+        }
     }
 }
