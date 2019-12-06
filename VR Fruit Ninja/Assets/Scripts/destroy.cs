@@ -18,4 +18,8 @@ public class destroy : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    void onTriggerEnter(Collider other){
+        Destroy(gameObject);
+    }
 }
