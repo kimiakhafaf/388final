@@ -9,6 +9,7 @@ public class switch_scene : MonoBehaviour
     public TextMeshProUGUI score, timer;
     private double time = 15.0;
     public static int point;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -22,15 +23,11 @@ public class switch_scene : MonoBehaviour
         time -= Time.deltaTime;
         int t = (int)time;
         timer.text = "Timer: " + t.ToString();
-        score.text = "Points: " + point.ToString();
+        //score.text = "Points: " + point.ToString();
         if (time <= 0)
         {
             SceneManager.LoadScene("gameover");
         }
     }
-
-    public void start_game()
-    {
-        SceneManager.LoadScene("game");
-    }
 }
+
