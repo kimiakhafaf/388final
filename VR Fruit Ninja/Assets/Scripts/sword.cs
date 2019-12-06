@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class sword : MonoBehaviour
 {
@@ -35,6 +36,13 @@ public class sword : MonoBehaviour
             //final_score.GetComponent<UnityEngine.UI.Text>().text = "SCORE: " + point.ToString();
             //score.text = "Points: " + point.ToString();
 
+        }
+
+        if(collision.gameObject.tag == "bomb"){
+            print("bomb");
+            Destroy(collision.gameObject);
+            point = 0;
+            SceneManager.LoadScene("gameover");
         }
     }
 

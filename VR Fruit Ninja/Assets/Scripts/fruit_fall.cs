@@ -8,6 +8,7 @@ public class fruit_fall : MonoBehaviour
     public GameObject apple;
     public GameObject pear;
     public GameObject strawberry;
+    public GameObject bomb;
     public float spawnTime = .1f;            // How long between each spawn.
     private float timer = 0; //counting timer, reset after calling SpawnRandom() function
     public List<GameObject> fruitList;
@@ -35,6 +36,10 @@ public class fruit_fall : MonoBehaviour
             Instantiate(fruitList[spawn],new Vector3(generateX(),generateY(),generateZ()),Quaternion.identity);
         }
         
+        //20% chance for bomb to spawn
+        if(Random.Range(0,5) == 0){
+            Instantiate(bomb,new Vector3(generateX(),generateY(),generateZ()),Quaternion.identity);
+        }
     }
 
     //Play with these numbers, not sure what the right range is
@@ -45,6 +50,6 @@ public class fruit_fall : MonoBehaviour
         return Random.Range(5f,10f);
     }
     public float generateZ(){
-        return Random.Range(2f,3f);
+        return Random.Range(1f,2f);
     }
 }

@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
+    //Fall speed increases as difficulty increases
+    public int fallSpeed;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public int getFallSpeed(){
+        return fallSpeed;
     }
 }
