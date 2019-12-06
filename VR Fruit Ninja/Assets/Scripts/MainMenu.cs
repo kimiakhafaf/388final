@@ -5,7 +5,6 @@ using UnityEngine;
 public class MainMenu : MonoBehaviour
 {
     //Fall speed increases as difficulty increases
-    public int fallSpeed;
 
     void Start()
     {
@@ -17,7 +16,15 @@ public class MainMenu : MonoBehaviour
         
     }
 
-    public int getFallSpeed(){
-        return fallSpeed;
+    public int easy(){
+        return 15;
+    }
+
+    public int medium(){
+        return 12;
+    }
+
+    public int hard(){
+        return 10;
     }
 }
